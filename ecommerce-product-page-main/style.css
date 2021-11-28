@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+img.avatar{
+    height: 30px;
+    
+    
+}
+
+img .logo-right-margin{
+    margin-right: auto;
+
+}
+
+.container_header{
+    display: flex;
+    align-items: center;    
+    /* justify-content: space-between; */
+}
+
+.right .cart{
+   padding-right: 1em;
+}
+
+.left{
+    margin-right: auto;
+}
+
+.justify-content{
+    justify-content: space-between;
+}
+.subhead{
+    color: hsl(26, 100%, 55%);
+    font-size: .8rem;
+    font-weight: 700;
+}
+.description{
+    font-size: 1rem;
+    color: hsl(220, 14%, 75%)
+
+}
+.span-percent{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%)
+}
+
+.value h2{
+    margin: 0;
+    font-size:2rem
+}
+.value span{
+    font-size: 1rem;
+    color: hsl(26, 100%, 55%);
+    background-color:hsl(25, 100%, 94%);
+}
+
+input{
+    width:40px;
+    outline:none;
+    border:none;
+    font-size:1.5rem;
+    text-align:center;
+    background: transparent
+}
+
+.hover:hover{
+    opacity: .9;
+    transition: all 0.5s ease;
+}
+button img{
+    outline:none;
+    border:none;
+    
+}
+
+.container-value{
+    background-color:hsl(223, 64%, 98%)
+}
+
+.mx-auto{
+    width:200px;
+    background-color: hsl(26, 100%, 55%);
+    color: white
+}
+
+.fa-shopping-cart{
+    color:white
+}
+
+@media (max-width: 995px)
+{
+    .navbar-collapse{
+        position: absolute;
+        z-index: 10000;
+        width: 100%;
+        top:50px
+    }
+}  
+
+@media (min-width:800px){
+    main{
+        display: flex;
+        flex:1;
+        max-width: 800px
+         !important;
+        margin-top: 50px !important;
+        padding: 0 !important;
+        
+    }
+
+
+    .container-carousel {
+        width: 100%;
+        height: 100px;
+    }
+
+    .carousel{ 
+        width: 15em; 
+        max-height: 500px !important;
+        margin: 0 auto;
+        
+    
+    }
+
+    .carousel-inner{
+        border-radius: 10px;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 230px;
+        border-radius: 10px;
+    }
+
+    .container-description{
+        width: 100%;
+        margin-top: 2rem;
+        line-height: 1rem;
+        padding: none !important;
+    }
+
+    .details{
+        width: 15em; 
+    }
+    .subhead{
+        font-size:.7rem;
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
+    }
+
+    h1{
+        font-size: 1.5rem !important;
+    }
+    .description{
+        font-size: .9rem !important;
+    }
+    .value h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .value span{
+        font-size: .7rem !important
+    }
+
+    .addToCart{
+        display:flex;
+        flex: 1;
+        gap: 40px;
+        align-items:baseline !important;
+        justify-content: center !important;
+        margin-top: 10px;
+    }
+
+    .container-value{
+        width: 200px !important;
+        margin: 0 !important;
+        
+    }
+
+    .container-cart .btn{
+        padding: 0px !important;
+    }
+}

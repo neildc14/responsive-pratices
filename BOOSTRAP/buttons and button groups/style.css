@@ -1,0 +1,10 @@
+*{
+    padding: 10px 50px;
+}
+
+.btn{
+    border-radius: 100px;
+    display: block;
+    margin-top: 10px;
+    box-shadow: none !important
+}

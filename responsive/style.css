@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+}
+
+.parent {
+    background-color: blueviolet;
+    padding: 30px;
+    width: 90%;
+    max-width: 1250px;
+    margin: 20px auto;
+}
+
+.child {
+    background-color: blueviolet;
+    padding: 30px;
+    width: 1250px;
+    max-width: 90%;
+    margin: 20px auto;
+}

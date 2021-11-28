@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  </style>
+</head>
+
+<body>
+  <!--header-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <div class="container">
+      <img src="images/icon-menu.svg" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+
+      </img>
+      <img class="p-2 logo" src="images/logo.svg" alt="this is a logo">
+      <div class="collapse navbar-collapse bg-light fw-bolder" id="navbarSupportedContent">
+        <ul class="navbar-nav me-5 mb-3 mb-lg-0">
+          <li class="nav-item ms-3">
+            <a class="nav-link" aria-current="page" href="#">Collections</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#">Men</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#" aria-disabled="true">Women</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#" aria-disabled="true">About</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#" aria-disabled="true">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right me-2">
+        <div class="btn hover">
+          <img class="cart" src="images/icon-cart.svg" alt="cart">
+        </div>
+        <img class="avatar" src="images/image-avatar.png" alt="">
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!--carousel-->
+    <div class="container-carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/image-product-1.jpg" class=" d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image-product-4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="container-description">
+
+      <div class="details">
+        <h5 class="subhead py-3">SNEAKER COMPANY</h5>
+        <h1 class="fw-bold">Fall Limited Edition Sneakers</h1>
+        <p class="lead description">These -profile sneakers are perfect casual companion.
+          Featuring a durable rubber outside sole. They'll stand everything the weather can offer</p>
+      </div>
+      <div class="value">
+        <div class=" d-flex mt-4 align-items-center">
+          <h2 class="fw-bolder me-2">$125.00</h2>
+          <span class="align-self-center border border-1 rounded rounded-5 py-1 px-3 fw-bolder">50%</span>
+        </div>
+        <span clas="value">
+          <h2 class="text-decoration-line-through text-muted right ">$250.00</h2>
+        </span>
+
+      </div>
+
+      <div class="addToCart ">
+        <div class="container-value  d-flex justify-content-between px-5 py-3 mt-3 rounded rounded-2">
+          <button type="button" class="value-button btn" id="decrease" onclick="decreaseValue()" value="Decrease Value">
+            <img src="images/icon-minus.svg" alt="">
+          </button>
+          <input type="number" id="number" value="0" class="fw-bolder" />
+          <button type="button" class="value-button btn" id="increase" onclick="increaseValue()" value="Increase Value">
+            <img src="images/icon-plus.svg" alt="">
+          </button>
+
+        </div>
+
+        <div
+          class="hover btn container-cart  mx-auto d-flex justify-content-center align-items-center py-3 rounded rounded-4 mb-4 ">
+          <i class="fa fa-shopping-cart fa-lg pe-2"></i>
+          <span class=" bolder text-light">Add to cart</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+
+
+
+
+  <script>
+    function increaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value;
+    }
+
+    function decreaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      document.getElementById('number').value = value;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

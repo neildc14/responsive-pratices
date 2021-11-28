@@ -1,0 +1,7 @@
+body{
+    display: grid;
+    color: red;
+    grid-gap: 1em;
+    grid-template-rows: auto 1em 2em 3em;
+    min-height:100vh;
+}
